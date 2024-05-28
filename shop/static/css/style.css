@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&display=swap');
+
+html {
+  font-size: 14px;
+}
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+.carousel-item img {
+  margin-top: 49px;
+  object-fit: cover;
+  object-position: top;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.old_price {
+  font-weight: bold;
+  color: red;
+}
+
+.new_price {
+  font-weight: bold;
+  background-color: green;
+  color: white;
+  padding: 2px;
+  border-radius: 5px;
+  margin-bottom: 2px;
+}
+
+.pic-box {
+  position: relative;
+}
+
+.hot {
+  background-color: orangered;
+  color: white;
+  width: 50px;
+  text-align: center;
+  font-weight: bold;
+  display: inline;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  z-index: 10;
+}
+
+.card-image-top {
+  width: 262px; 
+  height: 250px; /* Automatically adjust the height to maintain aspect ratio */
+  border-radius: 0.25rem; /* Optionally, add border-radius for rounded corners */ /* Add any additional styling for the card image here */
+}
+
+.container1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.slider-container {
+  margin-bottom: 20px;
+  background-color: aliceblue;
+}
+
+.slider-content {
+  /* Add styles for slider content */
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Product Cards Section */
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product-card {
+  width: calc(33.33% - 20px); /* Three cards per row with spacing */
+  margin-bottom: 20px;
+  background-color: #fffefe;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.product-card h2 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.product-card p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #777;
+}
+ 
+
+.btn btn-primary btn-sm
+{
+  background-color: red;
+}

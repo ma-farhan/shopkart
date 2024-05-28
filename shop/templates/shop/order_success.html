@@ -1,0 +1,56 @@
+{% extends 'layouts/main.html' %}
+
+{% block title %}
+  Order Success | ShopKart
+{% endblock title %}
+
+{% block content %}
+<br><br><br><br><br><br><br><br><br><br>
+<style>
+    /* CSS styles for making the content visually appealing */
+    .success-message {
+        color: green;
+        text-align: center; /* Center-align the text */
+        font-weight: bold; /* Make the text bold */
+        font-size: 24px; /* Increase font size */
+        margin-top: 50px; /* Add top margin for spacing */
+    }
+    .contact-info {
+        text-align: center; /* Center-align the text */
+        margin-top: 20px; /* Add top margin for spacing */
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="success-message">
+                <h1>Your Order Was Successfully Placed!</h1>
+                <!-- Additional styling can be applied here -->
+            </div>
+
+            
+            <!-- 
+            <h2>Order Details:</h2>
+            <p>Order ID: {{ order.id }}</p>
+            <p>Total Amount: ${{ order.total_amount }}</p>
+            
+            <h2>Shipping Address:</h2>
+            <p>{{ order.shipping_address }}</p>
+            
+            <h2>Items Ordered:</h2>
+            <ul>
+                {% for item in order.items.all %}
+                    <li>{{ item.product.name }} - Quantity: {{ item.quantity }}</li>
+                {% endfor %}
+            </ul>
+            -->
+
+            <div class="contact-info">
+                <p>For any questions or concerns regarding your order, please contact our customer support.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+{% endblock content %}

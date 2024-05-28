@@ -1,0 +1,65 @@
+{% extends 'layouts/main.html' %}
+{% block title %}
+  Registration | ShopKart
+{% endblock title %}
+{% block content %}
+<br><br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        /* CSS styles for making the content visually appealing */
+        .profile-container {
+            padding: 20px;
+            background-color: #f9f9f9; /* Light gray background */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+            margin-top: 50px; /* Add top margin for spacing */
+        }
+        .profile-section {
+            background-color: #ffffff; /* White background */
+            padding: 20px;
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+            margin-bottom: 20px; /* Add bottom margin for spacing */
+        }
+        .profile-section-title {
+            color: #333333; /* Dark gray text color */
+            border-bottom: 2px solid #eeeeee; /* Gray border bottom */
+            padding-bottom: 10px; /* Add bottom padding for spacing */
+            margin-bottom: 20px; /* Add bottom margin for spacing */
+        }
+        .profile-section-item {
+            margin-bottom: 10px; /* Add bottom margin for spacing */
+        }
+        .profile-section-item strong {
+            color: #007bff; /* Blue text color */
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <center><h2 style="color: #007bff;">USER PROFILE</h2></center><br>
+        
+        <div class="profile-section">
+            <h3 class="profile-section-title">User Information</h3>
+            <div class="profile-section-item"><strong>Name:</strong> {{ user.username }}</div>
+            <div class="profile-section-item"><strong>Email:</strong> {{ user.email }}</div>
+            <!-- You can include more user information fields here -->
+        </div>
+        
+        <!-- Additional sections can be added here for Order History, Account Settings, etc. -->
+        
+        <div class="profile-section">
+            <h3 class="profile-section-title">Order History</h3>
+            <p>No orders yet.</p>
+            <!-- Display order history here if available -->
+        </div>
+    </div>
+</body>
+</html>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+{% endblock content %}

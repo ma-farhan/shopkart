@@ -1,0 +1,70 @@
+{% extends 'layouts/main.html' %}
+{% block title %}
+ShopKart | Online Shopping
+{% endblock title %}
+
+{% block content %}
+{% include 'shop/inc/slider.html' %}
+
+  <div class="container1" style="margin-top:70px;" >
+    <div class="row">
+      <div class="col-12">
+        <!-- Product Cards Section -->
+        <section class="product-container">
+          <div class="product-card">
+            <b><i><h4>Only at ₹585 | Wearable <br> portable fan</h4></i></b><br>
+              <img src="/static/images/product1.jpg" alt="Product 1">
+              <br><br>
+              <center><a href=""></a></center>
+              <br>
+              <!-- Other details -->
+          </div>
+          <!-- Add more product cards -->
+          <div class="product-card">
+            <b><i><h4>Up to 50% off | <br> International brands</h4></i></b><br>
+              <img src="/static/images/Product2.jpg" alt="Product 2">
+              <br><br>
+              <center><a href=""></a></center>
+              <br>
+              <!-- Other details -->
+          </div>
+          <!-- Add more product cards -->
+          <div class="product-card">
+            <b><i><h4>Up to 60% off | Car, bike <br> parts & accessories</h4></i></b><br>
+              <img src="/static/images/product3.jpg" alt="Product 3">
+              <br><br>
+              <center><a href=""></center>
+              <br>
+              <!-- Other details -->
+          </div>
+          <!-- Add more product cards -->
+      </section>
+      <br>
+
+        <h3 class="mb-3"> Latest Offers</h3>
+        <hr style="border-color:#b8bfc2;">
+      </div>
+    
+      {% for item in products %}
+      <div class="col-md-4 col-lg-3">
+        <div class="card my-3">
+          <img src="{{ item.product_image.url }}"  class="card-image-top" alt="Categories">
+          <a href="{% url 'product_details' item.category.name item.name %}">
+          <div class="card-body">
+            <h5 class="card-title text-primary">{{ item.name }}</h5>
+            <p class="card-text">
+              <span class="float-start old_price"><s>Rs.{{ item.original_price | stringformat:'d'}}</s></span>
+              <span class="float-end new_price">Rs.{{ item.selling_price | stringformat:'d' }}</span>
+            </p>
+          </div>
+        </a>
+        </div>
+      
+      </div>
+      
+      {% endfor %}
+      
+    </div>
+    
+  </div>
+{% endblock content %}
